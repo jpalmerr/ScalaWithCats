@@ -34,7 +34,7 @@ behaviour seen in List, Option, and Either.
 
 Yes, functions are an example of a functor too.
 
-[functor map](/public/functorMap.png)
+[functor map](https://github.com/jpalmerr/ScalaWithCats/blob/master/public/%20functorMap.png)
 
 # Definition of a Functor
 
@@ -45,5 +45,5 @@ Formally, a functor is:
 
 type F[A] with an operation map (A => B) => F[B].
 
-![functor def](/Users/student/Documents/Scala/CatsScala/public/FunctorPictures.png)
+[functor def](https://github.com/jpalmerr/ScalaWithCats/blob/master/public/FunctorPictures.png)
 
