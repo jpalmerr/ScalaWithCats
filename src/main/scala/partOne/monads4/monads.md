@@ -4,7 +4,7 @@ Informally, a monad is anything with a constructor and a flatMap method.
 
 A monad is a mechanism for sequencing computations.
 
-[Monad picture] (...)
+[Monad picture](https://github.com/jpalmerr/ScalaWithCats/blob/master/public/MonadPicture.png)
 
 A monad’s flatMap method allows us to specify what happens next, 
 taking into account an intermediate complication.
