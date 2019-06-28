@@ -25,4 +25,3 @@ val a = Monad[Id].pure(3)
 // 3
 val b = Monad[Id].flatMap(a)(_ + 1)
 // 4
-

@@ -21,7 +21,7 @@ the `Some` or `None` context remains unchanged.
 ##### Futures
 
 Future is a functor that sequences asynchronous computations by queueing
-them and applying them as their predecessors complete. 
+them and applying them as their predecessors complete.
 
 When we work with a Future we have no guarantees about its internal state.
 The wrapped computation may be ongoing, complete, or rejected.
@@ -34,7 +34,7 @@ behaviour seen in List, Option, and Either.
 
 Yes, functions are an example of a functor too.
 
-[functor map](https://github.com/jpalmerr/ScalaWithCats/blob/master/public/%20functorMap.png)
+![functor map](../../../../../public/FunctorMap.png)
 
 # Definition of a Functor
 
@@ -45,5 +45,4 @@ Formally, a functor is:
 
 type F[A] with an operation map (A => B) => F[B].
 
-[functor def](https://github.com/jpalmerr/ScalaWithCats/blob/master/public/FunctorPictures.png)
-
+![functor def](../../../../../public/FunctorPictures.png)
