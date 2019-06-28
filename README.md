@@ -13,3 +13,9 @@ This also serves as an introduction to the Cats library.
 #### Author
 
 James Palmer
+
+#### Acknowledgements
+
+A particularly useful video when it comes to implementation of cats:
+
+[Adopting Cats](https://www.youtube.com/watch?v=4ODUEbowkBM)
