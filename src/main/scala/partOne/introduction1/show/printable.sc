@@ -45,6 +45,7 @@ implicit val catPrintable = new Printable[Cat] {
 }
 
 val cat = Cat("Garfield", 12, "Ginger")
+Printable.format(cat) // String = Garfield is a 12 year-old Ginger cat.
 Printable.print(cat)
 // Garfield is a 12 year-old Ginger cat.
 

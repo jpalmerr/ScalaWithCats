@@ -64,7 +64,7 @@ trait F[A]
 ```
 
 This means the types `F[A]` and `F[B]` are never subtypes of one another, no
-maer what the relationship between A and B. This is the default semantics
+matter what the relationship between A and B. This is the default semantics
 for Scala type constructors.
 
 Two issues tend to arise.

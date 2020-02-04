@@ -32,6 +32,7 @@ def add3[A: Monoid](items: List[A]): A =
 add3(list)
 val optionList = List(Some(1), None, Some(2), None, Some(3))
 add3(optionList)
+val allOptions = List(Some(1), Some(2))
 
 // note won't compile if all some
 
@@ -56,5 +57,3 @@ val order2 = Order(2, 2)
 val orderList = List(order1, order2)
 
 monoid.combine(order1, order2)
-
-// how do I apply add?

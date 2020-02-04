@@ -18,7 +18,7 @@ import cats.Semigroup
 
 Monoids follow the standard Cats pattern for the user interface:
 
-the companion object has an apply method that returns he type class instance
+the companion object has an apply method that returns the type class instance
 for a particular type.
 
 ##### String
