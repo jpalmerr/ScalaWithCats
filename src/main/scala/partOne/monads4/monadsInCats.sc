@@ -11,6 +11,10 @@ val opt2 = Monad[Option].flatMap(opt1)(a => Some(a + 2))
 val opt3 = Monad[Option].map(opt2)(a => 100 * a)
 // Some(500)
 
+
+// Monad[List].map(opt2)... won't compile as requires list
+// [A] must be a Monad
+
 val list1 = Monad[List].pure(3)
 // List(3)
 val list2 = Monad[List].pure(3, 2, 1)
@@ -23,6 +27,9 @@ val list3 = Monad[List].
 val list4 = Monad[List].map(list3)(a => a + 123)
 // List(124, 133, 125, 143, 126, 153)
 
+// Monad[List].flatMap : [A, B](fa: F[A])(f: A => F[B]): F[B]
+// Monad[List].map     : [A, B](fa: F[A])(f: A => B): F[B]
+
 /*
  Monad provides many other methods,
  including all of the methods from Functor.
@@ -33,7 +40,11 @@ val list4 = Monad[List].map(list3)(a => a + 123)
 import cats.instances.option._ // for Monad
 
 Monad[Option].flatMap(Option(1))(a => Option(a*2))
-// res0: Option[Int] = Some(2)
+// Option[Int] = Some(2)
+
+Monad[Option].map(Some(1))(a => Some(a * 2))
+// Option[Some[Int]] = Some(Some(2))
+Monad[Option].map(Some(1))(a => Some(a * 2)).flatten // Some(2) hence flatMap
 
 import cats.instances.list._ // for Monad
 

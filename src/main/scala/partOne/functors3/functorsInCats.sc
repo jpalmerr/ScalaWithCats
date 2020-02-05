@@ -20,6 +20,11 @@ val list1 = List(1, 2, 3)
 // list1: List[Int] = List(1, 2, 3)
 val list2 = Functor[List].map(list1)(_ * 2)
 // List(2, 4, 6)
+list1.map(_ * 2) // List[Int] = List(2, 4, 6)
+
+/*
+like we said, a list is a Functor...
+ */
 
 val option1 = Option(123)
 // Option[Int] = Some(123)
@@ -33,11 +38,16 @@ to one that operates over a functor
 type F[A] => F[B]
  */
 
-val func = (x: Int) => x + 1
+val func: Int => Int = (x: Int) => x + 1
 // Int => Int
 
-val liftedFunc = Functor[Option].lift(func)
+val liftedFunc: Option[Int] => Option[Int] = Functor[Option].lift(func)
 // Option[Int] => Option[Int]
+
+/*
+notice type annotation.
+Lifts an int => int to an Option[Int] => Option[Int] thanks to Functor[Option]
+ */
 
 liftedFunc(Option(1))
 // Some(2)

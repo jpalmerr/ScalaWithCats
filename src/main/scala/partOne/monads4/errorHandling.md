@@ -73,3 +73,7 @@ This is an open question.
   one we encountered. A typical example is validating a web form. It’s a
   far beer experience to report all errors to the user when they submit
   a form than to report them one at a time
+  
+--------------------------------
+
+This is a particularly striking read after experience with ZIO

@@ -6,12 +6,12 @@ val catName: Reader[Cat, String] =
   Reader(cat => cat.name)
 
 catName.run(Cat("Garfield", "lasagne"))
-// cats.Id[String] = Garfield
+//// cats.Id[String] = Garfield
 
 val greetKitty: Reader[Cat, String] =
   catName.map(name => s"Hello $name")
 
-greetKitty.run(Cat("Heathcliff", "junkfood"))
+greetKitty.run(Cat("Heathcliff", "junkfood")) // Hello Heathcliff
 
 /*
  notice pattern:
