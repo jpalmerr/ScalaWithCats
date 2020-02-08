@@ -1,5 +1,6 @@
 /*
 Cats provides transformers for many monads, each named with a T suffix:
+
 EitherT composes Either with other monads, OptionT composes Option,
 and so on.
  */
@@ -12,7 +13,6 @@ type ListOption[A] = OptionT[List, A]
 
 // creating instances using OptionT constructor, or (preferred) pure
 
-import cats.Monad
 import cats.instances.list._ // for Monad
 import cats.syntax.applicative._ // for pure
 
