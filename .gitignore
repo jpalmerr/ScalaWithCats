@@ -3,3 +3,6 @@ target
 .idea
 project
 .idea/workspace.xml
+.idea/modules
+project/target
+target/streams
