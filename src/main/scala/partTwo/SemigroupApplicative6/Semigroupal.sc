@@ -15,8 +15,8 @@ import cats.instances.option._
 Semigroupal[Option].product(Some(123), Some("abc")) // Some((123,abc))
 
 /*
-If both parameters are instances of Some, we end up with a tuple of the values within.
-If either parameter evaluates to None, the entire result is None:
+If BOTH parameters are instances of Some, we end up with a tuple of the values within.
+IF EITHER parameter evaluates to None, the entire result is None:
  */
 
 Semigroupal[Option].product(None, Some("abc")) // Option[(Nothing, String)] = None

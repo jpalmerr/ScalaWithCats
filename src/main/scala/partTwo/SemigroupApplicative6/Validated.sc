@@ -20,7 +20,7 @@ val i = Validated.Invalid(List("Badness"))
 // cats.data.Validated.Invalid[List[String]] = Invalid(List(Badness))
 
 /*
-However, it is o[en easier to use the valid and invalid smart constructors,
+However, it is often easier to use the valid and invalid smart constructors,
 which widen the return type to Validated:
  */
 
