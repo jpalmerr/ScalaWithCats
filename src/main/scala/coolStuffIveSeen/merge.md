@@ -23,3 +23,15 @@ xxx.merge // Either[Response]
 
 `EitherT[F, C, C].merge` gives you `F[C]`
 
+For example if I have a method returning
+```
+EitherT[IO[String, String]]
+```
+
+calling `.merge` will give me
+
+```
+IO[String]
+```
+
+
