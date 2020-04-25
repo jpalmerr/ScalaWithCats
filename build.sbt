@@ -2,12 +2,14 @@ name := "CatsScala"
 
 version := "0.1"
 
-scalaVersion := "2.12.7"
+scalaVersion := "2.13.1"
 
-libraryDependencies +=
-  "org.typelevel" %% "cats-core" % "1.0.0"
-
-libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+libraryDependencies ++= Seq(
+  "org.typelevel" %% "cats-core" % "2.1.1",
+  "dev.zio" %% "zio" % "1.0.0-RC18",
+  "org.typelevel" %% "cats-core" % "1.0.0",
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+)
 
 scalacOptions ++= Seq(
   "-Xfatal-warnings",

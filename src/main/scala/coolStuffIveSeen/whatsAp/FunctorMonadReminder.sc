@@ -29,7 +29,6 @@ and wrap it up inside an effect of the same type.
 
 // Monad
 
-import cats._
 import cats.implicits._
 
 import scala.concurrent.Future
