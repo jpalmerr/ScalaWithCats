@@ -1,11 +1,10 @@
 import java.util.Date
 
-import cats.data.EitherT
-import cats.effect.{IO, Sync}
+import cats.effect.Sync
 import cats.{Applicative, MonadError}
 import cats.implicits._
 import cats.mtl.implicits._
-import cats.mtl.{ApplicativeHandle, FunctorRaise, MonadState}
+import cats.mtl.{ApplicativeHandle, FunctorRaise}
 
 case class User(name: String, userName: String)
 
