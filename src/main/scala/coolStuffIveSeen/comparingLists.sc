@@ -1,3 +1,4 @@
+
 /*
 replicating scenario and solving for work problem
  */
@@ -42,3 +43,83 @@ def program(listA: List[Wrapper1], listB: List[Wrapper2]): Unit = {
 }
 
 program(list1, list2)
+
+val a = List("a", "c")
+val b = List("b", "d")
+
+a.intersect(b)
+
+ids1.filter { _ =>
+  intersect.contains("nonsense")
+}
+
+case class Wrapper3(id: String)
+
+val optionWrapper: List[Option[Wrapper3]] = List(Some(Wrapper3("id")))
+
+case class LivePlansConfig(
+                            monthlyPlanId: Option[String],
+                            monthlyPlanWithoutTrialId: Option[String],
+                            annualPlanId: Option[String],
+                            annualPlanWithoutTrialId: Option[String]
+                          )
+
+case class PlanId(id: String)
+
+PlanId("1") :: List(PlanId("2")) ::: PlanId("3") :: List(PlanId("4"))
+
+println("---------------------------------------------------------")
+println("---------------------------------------------------------")
+
+def toListVerbose(plans: LivePlansConfig) = {
+
+  val a: List[PlanId] = plans.monthlyPlanId match {
+    case Some(value) => List(PlanId(value))
+    case None => List.empty[PlanId]
+  }
+
+  val b: List[PlanId] = plans.annualPlanId match {
+    case Some(value) => List(PlanId(value))
+    case None => List.empty[PlanId]
+  }
+
+  val c: List[PlanId] = plans.annualPlanWithoutTrialId match {
+    case Some(value) => List(PlanId(value))
+    case None => List.empty[PlanId]
+  }
+
+  val d: List[PlanId] = plans.monthlyPlanWithoutTrialId match {
+    case Some(value) => List(PlanId(value))
+    case None => List.empty[PlanId]
+  }
+
+  a ::: b ::: c ::: d
+
+}
+
+val withNone = LivePlansConfig(Some("A"), None, Some("C"), Some("D"))
+
+toListVerbose(withNone)
+
+def toList(plans: LivePlansConfig): List[PlanId] = {
+
+  val a: List[PlanId] = plans.monthlyPlanWithoutTrialId.map { x =>
+    List(PlanId(x))
+  }.getOrElse(List.empty[PlanId])
+
+  val b: List[PlanId] = plans.monthlyPlanId.map { x =>
+    List(PlanId(x))
+  }.getOrElse(List.empty[PlanId])
+
+  val c: List[PlanId] = plans.annualPlanId.map { x =>
+    List(PlanId(x))
+  }.getOrElse(List.empty[PlanId])
+
+  val d: List[PlanId] = plans.annualPlanWithoutTrialId.map { x =>
+    List(PlanId(x))
+  }.getOrElse(List.empty[PlanId])
+
+  a ::: b ::: c ::: d
+}
+
+toList(withNone)
