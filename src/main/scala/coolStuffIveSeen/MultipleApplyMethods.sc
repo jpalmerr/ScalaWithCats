@@ -15,7 +15,6 @@ object Thing {
 
   def apply(number: Int): Thing =
     new Thing(number)
-
 }
 
 val thing1 = Thing(10, Some("two params!"))
