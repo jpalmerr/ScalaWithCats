@@ -17,9 +17,16 @@ Test7 // evaluate me just to get it out way
 
 Test7 // hence it doesn't happen this time
 
+// IGNORE ABOVE ME
 
-Test7.simpleField
+
+
 // im a val so i only return my final value
+Test7.simpleField
+// res3: Int = 42
 
-Test7.noParamMethod
 // im a method so i do everything that happens inside me
+Test7.noParamMethod
+// evaluating noParamMethod
+//Im in a def you will see me
+//res4: Int = 42
