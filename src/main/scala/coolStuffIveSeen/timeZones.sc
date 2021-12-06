@@ -15,3 +15,5 @@ def getValue(wrapper: Option[Wrapper]): Option[String] = {
 
 getValue(Some(Wrapper("VALUE")))
 getValue(None)
+
+val x: Array[String] = LocalDateTime.now().toString.split("T")
