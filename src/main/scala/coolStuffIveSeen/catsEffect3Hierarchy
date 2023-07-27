@@ -1,0 +1,3 @@
+If you need `Concurrent` AND `Sync`, use `Async`
+
+![Cats Hierarchy](../../../../public/CatsHierarchy.png)

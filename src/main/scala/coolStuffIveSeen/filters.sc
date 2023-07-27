@@ -18,3 +18,8 @@ exampleListOne.filter(p => varsToAvoid.contains(p.number))
 exampleListOne.filterNot(p => varsToAvoid.contains(p.number))
 
 exampleListOne.filterNot(p => varsToAvoid.contains(p.number)).exists(_.link.isDefined)
+
+
+val xxx = List(1, 2, 3, 4)
+xxx.filter(_ == 1)
+xxx.filterNot(_ == 1)
