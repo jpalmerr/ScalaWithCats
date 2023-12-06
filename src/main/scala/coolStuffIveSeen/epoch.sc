@@ -1,20 +1,13 @@
-import java.time.Instant
+import java.time.LocalDate
 
-final case class EpochTime(instant: Instant) extends AnyVal
+val d1 = LocalDate.of(2023,10,10)
+d1.toEpochDay
 
-object EpochTime {
-  def apply(secondsSinceEpoch: Long): EpochTime =
-    EpochTime(Instant.ofEpochSecond(secondsSinceEpoch))
-}
+val d2 = LocalDate.of(2023, 10, 20)
+d2.toEpochDay
 
-// 2020-09-23T13:50:17.432698Z
-EpochTime(1558364752.toLong)
-EpochTime(1600868836.toLong)
-EpochTime(1601473636.toLong)
-EpochTime(1600869113.toLong) // canceled_at
+d1.toEpochDay.to(d2.toEpochDay)
 
+d1.toEpochDay.to(d2.toEpochDay).map(LocalDate.ofEpochDay)
 
-
-// 2020-09-24T10:22:55.628Z
-EpochTime(1558364752.toLong) // created
-
+d2.toEpochDay.to(d1.toEpochDay).map(LocalDate.ofEpochDay)
