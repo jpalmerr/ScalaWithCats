@@ -24,7 +24,7 @@ import java.time.format.DateTimeFormatter
 
 val instant = Instant.now().atZone(ZoneOffset.UTC)
 
-import java.time.temporal.ChronoUnit.DAYS
+import java.time.temporal.ChronoUnit._
 
 val xx = instant.truncatedTo(DAYS)
 val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("YYMMdd")
@@ -32,8 +32,18 @@ val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("YYMMdd")
 formatter.format(xx)
 formatter.format(instant)
 
-Instant.parse("2022-12-30T09:01:02.00Z")
 val startDate = Instant.parse("2022-12-30T09:01:02Z")
 
-
 formatter.format(startDate.atZone(ZoneOffset.UTC))
+
+val instant = Instant.parse("2024-01-30T09:01:02.00Z")
+
+val zdt = instant.atZone(ZoneOffset.UTC)
+  zdt
+  .withHour(6)
+  .withMinute(0)
+  .withSecond(0)
+  .withNano(0)
+  .toInstant
+
+zdt.withHour(23)

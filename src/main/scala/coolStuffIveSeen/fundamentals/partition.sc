@@ -16,4 +16,3 @@ val list1 = List(Model(Some("thing")), Model(None))
 
 list1.filter(_.optional.isEmpty)
 
-"".isN

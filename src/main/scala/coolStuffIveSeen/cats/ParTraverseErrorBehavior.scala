@@ -1,4 +1,4 @@
-package coolStuffIveSeen
+package coolStuffIveSeen.cats
 
 import cats.data.{Validated, ValidatedNel}
 import cats.effect.{ExitCode, IO, IOApp}
