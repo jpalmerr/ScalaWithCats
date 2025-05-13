@@ -5,3 +5,4 @@ project
 .idea/modules
 project/target
 target/streams
+.bsp
