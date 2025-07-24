@@ -35,6 +35,4 @@ Higher order functions are functions that returns functions at the value level
 
 ---------------------
 
-#### A nice explnation on why it is a good idea to use F[_] wrap on traits
-
-https://gitter.im/typelevel/cats-effect?at=5dfa5831c62fdf33f713a072
+[A nice explnation on why it is a good idea to use F[_] wrap on traits](https://gitter.im/typelevel/cats-effect?at=5dfa5831c62fdf33f713a072)
